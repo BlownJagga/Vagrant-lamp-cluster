@@ -1,0 +1,23 @@
+What is Apache?
+Apache is a web-server is used for rendering web pages. It can also be used for Load-Balancing.
+
+What is Nginx?
+Nginx is a web-server is used for rendering web pages. It can also be used for Load-Balancing.
+
+How to install Apache on Ubuntu
+
+a2dissite <name_of_site>  
+a2ensite <name_of_site> 
+reload apache2 
+
+#Linux Firewall
+iptables uses Netfilter frameworks. It is one of the most efficient firewalls today
+ufw (ubuntu)
+
+#Packet filtering with iptables
+#Tables: a construct that delinate or assigns broad cateegories of different functionalitys 
+such as packet filtering or NAT(Networt Address Translation). there are 4 tables: filter, nat, mangle, raw.
+#Chains: Every table has built in chains, but you can define your own chains.
+
+
+#ufw

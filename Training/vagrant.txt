@@ -1,0 +1,10 @@
+vmware, hypervisor, virtualbox
+
+# Commands in vagrant
+vagrant init # initialize vagrant
+vagrant start # start vagrant
+vagrant ssh # ssh into vagrant 
+vagrant halt # stop vagrant 
+vagrant resume # resume vagrant 
+vagrant destroy # destroy vagrant 
+vagrant reload # reload vagrant(Includes any changes in vagrantfile)

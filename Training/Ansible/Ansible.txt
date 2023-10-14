@@ -1,0 +1,101 @@
+Ansible 
+. Fundametals 
+. Key Components
+. Best Practices
+. Spring Boot REST Deployment
+. CI with Ansible 
+. Application Deployment 
+. Provision Docker Host 
+. Docker and Ansible 
+
+FUNDAMENTALS
+What is Ansible?
+Ansible is an opensource IAC tool for installing and configuring infrastructure
+It is Radically simple IT automation engine that can automate 
+. Cloud Provisioning 
+. Configuration Management
+. Intra-service orchestration
+
+
+Why Ansible?
+. Efficient 
+  . Doesnt require any custom agent (agentless) or software to install 
+  . Ansible works by connecting to your nodes and pushing out small programs called 
+    "Ansible Modules" to them.
+. Secure
+  . No agent is required
+  . Uses OpenSSH to encrypt communications
+
+TERMS 
+Inventory: Ansible works across multiple systems at the same time. 
+It does this by selecting portions of systems listed in Ansible Inventory file, which defaults 
+to being saved in the /etc/ansible/hosts directory
+
+examples
+[webservers]         [appservers]      [dbservers] # group name
+192.162.35.140       10.110.140.10     172.35.0.5  # Server Ip address (hosts)
+192.168.35.141       10.110.141.10
+
+Host: A local remote machine that Ansible manages. 
+They use similar cvariables assigned to them, and they can also be organised as groups
+
+Groups: Consist of several hosts assigmed to a pool that can be conviently targeted togethes
+they also share similar variables assigned to them.
+
+Playbooks: Playbook is the language in which ansible orchestrates and configures, 
+adminsters and deploys systems.
+
+Play: A play is a mapping between a set of hosts selected by a host specifier and the task 
+which run on those hosts to define the role that those systems will perform.
+
+Task: Task is a action with a name and optionallu some other keywords that calls modules.
+
+Modules: are units of work that Ansible ships out to remote hosts. 
+Ansible refers to the collection of available modules as Libraries.
+
+Library: A collection of modules made available by Ansible or to a playbook.
+
+Installing Ansible 
+using YUM:
+$ sudo yum install ansible
+using APT:
+$ sudo apt-get install software-properties-common 
+$ sudo apt-add-repository ppa:ansible/ansible
+$ sudo apt-get update
+$ sudo apt-get install ansible
+Using PIP: 
+sudo easy_install pip 
+sudo pip install ansible
+
+CONTROL MACHINE REQUIREMENTS
+. Python 2 (version 2.6 or later) or Python 3 (version 3.5 or later)
+. Windows is not supported for the control machine
+   
+Ad-Hoc Commands for Ansible:
+ $ ansible [pattern] -m [module] -a "[module options]"
+ ad-hoc commands offer a quick and easy way to execute ansible commands for automation. 
+ the advantage of of these ad-hoc commands are they leverage ansible modules which are also IDEMPOTENT
+
+ The Importance of IDEMPOTENCE
+ Idemotence : the property of certain operations in mathematics and computer scice, that 
+ can be applied multiple times without changing the outcome. for ansible ths means after 1 run of the playbook to set 
+ the desired state, futher runs of the playbook will not change the state of the system.
+
+Why Ad-hoc is important 
+. Rebooting a Server
+. Managing services 
+. Managing files 
+. Fact Gathering 
+. Connectivity Testing
+
+Stat : Retrives facts about the module 
+Copy : copy command fot for ansible 
+Terms
+. Inventory
+. Host
+. Group
+. Playbook
+. Playbook
+. Task
+. Modules
+. Library

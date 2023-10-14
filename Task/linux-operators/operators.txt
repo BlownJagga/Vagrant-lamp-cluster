@@ -1,0 +1,15 @@
+1: [-e file] Checks if the file exists.
+2: [-f file] Checks if the file is a regular file.
+3: [-d file] Checks if the file is a directory.
+4: [-s file] Checks if the file is not empty (has as size greater than zero).
+5: [-r file] Checks if the file is readable.
+6: [-w file] Checks if the file is writable.
+7: [-x file] Checks if the file is executable.
+8: [-z string] Checks if the string is empty.
+9: [-n string] Checks if the string is not empty.
+10: [file1 -nt file2] Checks if file1 is newer than file2 (modification time).
+11: [file1 -ot file2] Checks if file1 is older than file2 (modification time).
+12: [-O file] Checks if the file is owned bu curren user.
+13: [-G file] Checks if the file belongs to the same group as the current user.
+14: [file1 -ef file2] Checks if file1 and file2 refer to the same inode (hard links).
+15: [-h file or -L file] Checks if the file is a symbolic link.
